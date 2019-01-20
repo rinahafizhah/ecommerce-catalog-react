@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import { Switch, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
-import Product from "./components/Product";
 import Details from "./components/Details";
 import Cart from "./components/Cart";
 
@@ -11,10 +11,11 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <ProductList />
-        <Product />
-        <Details />
-        <Cart />
+        <Switch>
+          <Route path="/" exact component={ProductList} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+        </Switch>
       </React.Fragment>
     );
   }
