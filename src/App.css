@@ -12,11 +12,3 @@ body{
   color: var(--mainDark) !important;
 }
 
-.text-title{
-  font-family: "Permanent Marker", cursive;
-  letter-spacing: 0.3 rem;
-  text-transform: uppercase;
-}
-.text-blue{
-  color: var(--mainBlue);
-}
